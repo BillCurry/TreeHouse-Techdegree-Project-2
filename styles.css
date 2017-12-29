@@ -1,0 +1,313 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+/*    border: 1px solid red;*/
+}
+
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    background: #d9d9d9;
+    width: 100%;
+    max-width: 1100px;
+    color: black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+    margin-bottom: 1.8em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    width: 90%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ----*/
+
+.main-header,
+.nav
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-header {
+    padding: 2em 1em 0 1em;
+}
+
+.name {
+    text-align: center;
+    margin: 0;
+    color: firebrick;
+}
+
+.nav {
+    margin-top: .5em;
+}
+
+.nav a {
+    padding: .2em;
+    display: block;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    background: white;
+    margin: 4px 15px;
+}
+
+.nav a:hover,
+.nav-bottom a:hover {
+    color: cadetblue;
+}
+
+/* ---- Intro ---- */
+.intro {
+    color: #a6a6a6;
+    padding: 1em;
+    font-size: .8em;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+.intro-text {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.profile-img {
+    width: 70%;
+    margin-top: 24px;
+}
+
+/* ---- Portfolio Section ---- */
+.portfolio {
+    /*background: white;*/
+    background: radial-gradient(white, aliceblue);
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-bottom: solid 1px black;
+    border-top: solid 1px black;
+    }
+
+.port-main-header,
+.goals-main-header {
+    color: firebrick;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.port-img {
+    width: 90%;
+}
+
+.sectionhead {
+    margin: 20px 0;
+    font-size: 1em;
+
+}
+.portfolio p {
+    padding: 0 1em;
+    font-size: .8em;
+}
+/* ---- Goals ---- */
+
+.goals {
+  text-align: center;
+  padding: 20px 40px 20px;
+  background: #fff;
+  border-bottom: solid 2px gray;
+}
+
+.goals-main-header {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: teal;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: slategrey;
+}
+
+
+/* ---- Layout Containers ---- */
+
+.wrapper {
+    background: #f9f9f9;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.intro,
+.contact,
+.portfolio {
+    text-align: center;
+}
+
+.contact {
+    padding-top: 1em;
+    margin-top: 20px;
+    margin-top: auto;
+}
+
+.contact p {
+    color: #a6a6a6;
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: 0.8em;
+}
+
+.footer {
+    padding: 1em 1em 1em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bottom {
+    display: none;
+}
+
+
+
+.backtotop {
+    text-transform: uppercase;;
+}
+
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+    /*.main-header {
+        height: 200px;
+        justify-content: flex-end;
+    }*/
+    .nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .nav a {
+        background: transparent;
+    }
+    .intro {
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.1em;
+        margin-bottom: 2em;
+    }
+    .profile-img {
+        order: 1;
+        flex-basis: 40%;
+    }
+
+    .intro-text {
+        flex-basis: 60%;
+    }
+
+    .port-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .port-item {
+        flex: 1 50%;
+    }
+
+    .portfolio p {
+        font-size: 1em;
+    }
+
+    .contact p {
+    padding-right: 3em;
+    padding-left: 3em;
+    font-size: 01.2em;
+}
+
+.footer {
+    display: flex;
+}
+
+
+
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bottom a {
+    padding: .2em;
+    font-size: .8em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2px 8px;
+}
+
+.backtotop {
+    display: none;
+}
+
+}
+
+@media (min-width: 1024px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .intro-text {
+        padding-right: 1em;
+    }
+    .port-item {
+        flex-basis: 33%;
+    }
+}
+
